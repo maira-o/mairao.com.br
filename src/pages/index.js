@@ -1,12 +1,20 @@
 import React from "react"
 
 import Layout from "../components/Layout"
+import PostItem from "../components/PostItem"
+
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="home" />
-    <h1>home</h1>
+    <PostItem />
+    <PostItem />
+    <PostItem />
+    <PostItem />
+    <PostItem />
+    <PostItem />
+    <PostItem />
   </Layout>
 )
 
