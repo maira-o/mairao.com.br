@@ -15,14 +15,14 @@ const IndexPage = () => {
             node {
               fields {
                 slug
-              }
+              },
               frontmatter {
                 background
                 category
                 date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                 description
                 title
-              }
+              },
               timeToRead,
             }
           }
