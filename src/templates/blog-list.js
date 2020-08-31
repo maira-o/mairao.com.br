@@ -2,15 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
 import Pagination from '../components/Pagination'
-
-import SEO from "../components/seo"
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges
 
-  const { currentPage, numPages } = props.pageContext
+  const { numPages, currentPage } = props.pageContext
+
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? '/' : `/${currentPage - 1}`
