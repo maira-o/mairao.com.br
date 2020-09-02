@@ -1,6 +1,6 @@
-require('dotenv').config()
+require("dotenv").config()
 
-const queries = require('./src/utils/algolia_queries')
+const queries = require("./src/utils/algolia_queries")
 
 module.exports = {
   siteMetadata: {
@@ -63,10 +63,10 @@ module.exports = {
       options: {
         appId: process.env.ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
+        indexName: process.env.ALGOLIA_INDEX_NAME,
         queries,
-        chunkSize: 10000, 
-        enablePartialUpdates: true, 
+        chunkSize: 10000, // default: 1000
+        enablePartialUpdates: true,
       },
     },
     {
